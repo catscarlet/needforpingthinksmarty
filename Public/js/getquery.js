@@ -15,7 +15,7 @@ function GetCheckbox() {
 
 function getquery() {
   var value = GetCheckbox();
-  var url = 'query_db.php?';
+  var url = 'index.php/home/Querydb/Querydb?';
   xmlHttp = GetXmlHttpObject();
   if (xmlHttp == null) {
     alert('Browser does not support HTTP Request');
