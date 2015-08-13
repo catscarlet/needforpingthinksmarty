@@ -33,3 +33,7 @@
 
 15:11 2015/8/12
 开始needforpingthinksmarty
+
+19:36 2015/8/13
+把pinglist用thinkphp框架改写成controller了，几十行代码瞬间只剩4行……
+前后端分离，也不错。
