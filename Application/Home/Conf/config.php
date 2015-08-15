@@ -9,5 +9,5 @@ return array(
 'DB_PWD' => '5umAQXVrLUsrqW5P',
 'DB_PORT' => '3306',
 'DB_PREFIX' => 'think_',
-'DB_PARAMS' => array(\PDO::ATTR_CASE => \PDO::CASE_NATURAL), // 数据库连接参数，强制查询返回值大小写
+'DB_PARAMS' => array(\PDO::ATTR_CASE => \PDO::CASE_NATURAL), // 鏁版嵁搴撹繛鎺ュ弬鏁帮紝寮哄埗鏌ヨ杩斿洖鍊煎ぇ灏忓啓
 );
