@@ -4,11 +4,11 @@
     i = 0;
     do {
       chart1.addSeries({
-      name: obj[i].server_name,
+      name: obj[i].alias_name,
       data: obj[i].rtt_avg
     });
       chart2.addSeries({
-        name: obj[i].server_name,
+        name: obj[i].alias_name,
         data: obj[i].loss_percent
       });
       i++;

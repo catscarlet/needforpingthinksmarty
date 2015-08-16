@@ -30,6 +30,10 @@ class QuerydbController extends Controller
                 $query_DATA['rtt_avg'][$i] = round($row['rtt_avg']);
             }
 
+            $pinglist = M('pinglist');
+            $data = $pinglist->where('server_name = '."\"$q\"")->select();
+            $pinglist_alias = $data[0]['alias_name'];
+
          /* 因为sql查询是DESC的，所以要根据键值重新排序，不然坐标轴的时间会变成降序 */
             ksort($query_DATA['DATETIME']);
             ksort($query_DATA['loss_percent']);
@@ -37,7 +41,8 @@ class QuerydbController extends Controller
 
          /* 将查询的关键词与查询结果合并*/
             $query_data = array('server_name' => $q);
-            $query_data = array_merge($query_data, $query_DATA);
+            $query_data_alias = array('alias_name' => $pinglist_alias);
+            $query_data = array_merge($query_data, $query_data_alias, $query_DATA);
 
             return $query_data;
         }
