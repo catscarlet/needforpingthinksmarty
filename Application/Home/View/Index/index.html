@@ -16,25 +16,50 @@
 
 <body>
 
-	<form name="server_selecter" class="formcss">
-		<table border="0">
 
-			<volist name="list" id="vo">
-				<tr>
-					<td>
-						<input type="checkbox" id="{$vo.id}" name="q[]" value="{$vo.server_name}"> {$vo.alias_name}</td>
-					<td>{$vo.server_name}</td>
-				</tr>
-			</volist>
+	<div style="width:95%; margin:0 auto; overflow:auto; _display:inline-block;">
+				<div style="width:310px; float:left">
 
-		</table>
-		<input type="button" name="submit" value="提交查询" onclick="getquery()">
-	</form>
+					<h1>Need For Ping ThinkPHP</h1>
 
-	<div id="LOSS_container" style="min-width: 310px; height: 400px; margin: 0 auto">丢包率图表</div>
-	<div id="LATENCY_container" style="min-width: 310px; height: 400px; margin: 0 auto">延迟图表</div>
+			<form name="server_selecter" class="formcss">
+				<table border="0">
+					<volist name="list" id="vo">
+						<tr>
+							<td>
+								<input type="checkbox" id="{$vo.id}" name="q[]" value="{$vo.server_name}">
+							</td>
+							<td>{$vo.alias_name}</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>{$vo.server_name}</td>
+						</tr>
+					</volist>
+				</table>
+				<input type="button" name="submit" value="提交查询" onclick="getquery()">
+			</form>
+			<p>博客地址：<a href="http://blog.catscarlet.com"> http://blog.catscarlet.com</a></p>
 
-	<p>博客地址：<a href="http://blog.catscarlet.com"> http://blog.catscarlet.com</a></p>
+		</div>
+
+		<div style=" margin-left:310px;">
+
+			<div id="LOSS_container" style="min-width: 310px; height: 400px; margin: 0 auto">丢包率图表</div>
+			<div id="LATENCY_container" style="min-width: 310px; height: 400px; margin: 0 auto">延迟图表</div>
+
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
 
 </body>
 
