@@ -53,4 +53,7 @@
 11:54 2015/8/17
 更新shell配置
 
+12:28 2015/8/17
+更改shell，不再读取server_list.txt，更改为读取mysql的pinglist数据表。取消server_list的使用。
+
 
