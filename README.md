@@ -1,6 +1,6 @@
 # Need For Ping
 ## 简介
-项目**Need For Ping**的最终版，今后所有关于Need For Ping的项目均在此项目中更新。
+项目**Need For Ping**的最终项目，今后所有关于Need For Ping的项目均在此项目中更新。
 
 本项目主要用于对网络稳定性的检测，可用于对不同提供商、不同区域的虚拟主机、VPS等网络稳定性的对比。
 
@@ -14,6 +14,7 @@
 
 ## 安装
 ### 全新安装
+请在这里下载最新版：[github.com_releases](https://github.com/catscarlet/needforpingthinksmarty/releases)
 - 需要给Public\shell下的脚本脚本手动增加运行权限，并修改安装目录
 
 ```
@@ -73,12 +74,13 @@ Application\Home\View\Index下的html文件负责界面展示
 - index.html负责首页展示
 
 ## 项目展示
-[临时Demo](http://pi.catscarlet.com:8091/needforpingthinksmarty/)
+[临时Demo](http://pi.catscarlet.com:8091/needforpingthinksmarty/) 这是一台用旧笔记本改造的linux服务器，网络的稳定性会影响展示效果。以后会提供稳定的服务器做参考
 
 ## 已知缺陷
 - 时间范围：目前以显示记录时间范围作为显示范围，也就是说如果我在最近24小时之内关机或停用此功能1小时，那么我继续查询24小时范围内数据的话，会从之前第25小时开始显示，没有数据的1小时无法体现，横坐标轴伪连续。
 - 查询范围：查询范围需要修改底层php文件
 - 数据库清理：数据库没有清理旧数据功能
+- ping不确定性：ping是icmp协议，而日常流量都是tcp和udp协议。网络中可能为提高测试效果，将icmp包高优先级传递，从而产生ping不丢包但连接无法建立数据丢包严重的情况。考虑过tcpping，但tcpping的局限性也很大
 
 ## TODO
 - 优化安装方式
