@@ -16,18 +16,17 @@
 
 <body>
 
-
 	<div style="width:95%; margin:0 auto; overflow:auto; _display:inline-block;">
-				<div style="width:310px; float:left">
+		<div style="width:310px; float:left">
 
-					<h1>Need For Ping ThinkPHP</h1>
+			<h1>Need For Ping ThinkPHP</h1>
 
 			<form name="server_selecter" class="formcss">
 				<table border="0">
 					<volist name="list" id="vo">
 						<tr>
 							<td>
-								<input type="checkbox" id="{$vo.id}" name="q[]" value="{$vo.server_name}">
+								<input type="checkbox" id="{$vo.id}" name="q[]" value="{$vo.server_name}" checked>
 							</td>
 							<td>{$vo.alias_name}</td>
 						</tr>
@@ -39,7 +38,8 @@
 				</table>
 				<input type="button" name="submit" value="提交查询" onclick="getquery()">
 			</form>
-			<p>博客地址：<a href="http://blog.catscarlet.com"> http://blog.catscarlet.com</a></p>
+			<p>GitHub地址：<a href="https://github.com/catscarlet/needforpingthinksmarty">GitHub</a></p>
+			<p>博客地址：<a href="http://blog.catscarlet.com">http://blog.catscarlet.com</a></p>
 
 		</div>
 
@@ -51,15 +51,6 @@
 
 		</div>
 	</div>
-
-
-
-
-
-
-
-
-
 
 </body>
 
