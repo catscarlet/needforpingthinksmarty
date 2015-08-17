@@ -1,14 +1,8 @@
 #!/bin/bash
+. needforping.conf
+
 i=0
 OUTPUT=$2
-
-
-DB_NAME=needforping
-DB_USER=thinkphp
-DB_PWD=PEy4cmbnenKWP4db
-DB_PREFIX=think_
-
-
 
 function output_to_mysql() {
 	MYSQL_COMMAND="INSERT INTO $DB_PREFIX$DB_NAME.pingresult (id, server_name, DATETIME, loss_percent, rtt_min, rtt_avg, rtt_max) VALUES (NULL, \"$THESERVER\", \"$DATETIME\", \"$LOSS\", \"$min\", \"$avg\", \"$max\");"

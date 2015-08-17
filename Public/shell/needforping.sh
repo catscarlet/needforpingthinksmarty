@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-needforping_DIR=/var/www/html/8091/needforpingthinksmarty/Public/
+. needforping.conf
 
 TMP_DIR=/$needforping_DIR/shell/pingresult
 SERVER_LIST=/$needforping_DIR/shell/server_list.txt
