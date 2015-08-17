@@ -4,11 +4,10 @@
 
 本项目主要用于对网络稳定性的检测，可用于对不同提供商、不同区域的虚拟主机、VPS等网络稳定性的对比。
 
+项目采用了thinkphp作为框架编写，并使用highcharts作为图表展示，服务器端需要php、mysql服务和linux环境，客户端几乎对浏览器没有限制。
+
+## 工作原理
 项目工作方式是定时ping远端主机，收集丢包率和延迟，并用图表展示。
-
-项目是靠html+php+mysql+js+bash(unix shell)编写和运行的，需要php、mysql服务和linux环境。
-
-底层依靠shell脚本做数据的采集；界面使用一个简单的html做框架，js做ajax取数据做查询，php负责从mysql读取数据并输出json格式，最终由highcharts JS图表库进行展示 相对于之前的版本，数据保存在数据库，支持多组查询。
 
 ## 软件截图
 ![Need For Ping](https://github.com/catscarlet/needforpingthinksmarty/blob/master/snapshot.png)
@@ -32,22 +31,22 @@ needforping_DIR=/var/www/html/8091/needforpingthinksmarty/Public/
   DB_PREFIX=think_
   ```
 
-- 在mysql数据库中新建数据库库think_needforping，用户名thinkphp，密码PEy4cmbnenKWP4db
+- 在mysql数据库中新建数据库库：think_needforping，用户名：thinkphp，密码：PEy4cmbnenKWP4db
 
   如果想修改的话，需要修改needforping.conf和Application/Home/Conf/config.php中的配置
 
 - 导入数据库结构Public/think_needforping.sql
-- 手动在crontab中添加类似：
+- 手动在crontab中添加定时运行：
 
   ```
   */2 *   * * *   root  /var/www/html/8091/needforpingthinksmarty/Public/shell/needforping.sh
   ```
 
 ### 升级
-因为可能会修改数据库结构，所以本项目不保证可以支持从旧版本升级，不支持needforping各版本间升级。如需升级，请自行diff数据库结构变化。
+因为可能会修改数据库结构，本项目不保证可以支持从旧版本升级，不支持needforping各版本间升级。如需升级，请自行diff数据库结构变化。
 
 ## 配置
-编辑中
+QuerydbController.class.php中的$query_range为最大查询范围
 
 ## 代码组成
 ### Bash部分
@@ -74,12 +73,12 @@ Application\Home\View\Index下的html文件负责界面展示
 - index.html负责首页展示
 
 ## 项目展示
-编辑中
+[临时Demo](http://pi.catscarlet.com:8091/needforpingthinksmarty/)
 
 ## 已知缺陷
 - 时间范围：目前以显示记录时间范围作为显示范围，也就是说如果我在最近24小时之内关机或停用此功能1小时，那么我继续查询24小时范围内数据的话，会从之前第25小时开始显示，没有数据的1小时无法体现，横坐标轴伪连续。
 - 查询范围：查询范围需要修改底层php文件
-- 数据库清理：数据库没有定时清理
+- 数据库清理：数据库没有清理旧数据功能
 
 ## TODO
 - 优化安装方式
