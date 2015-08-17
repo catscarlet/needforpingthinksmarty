@@ -8,7 +8,7 @@ class QuerydbController extends Controller
 {
     public function Querydb($q = 'thinkphp')
     {
-        $query_range = 360;
+        $query_range = 360;   //最大查询范围
         foreach ($q as $id => $query) {
             $query_output[$id] = query_db($query, $query_range);
         }
