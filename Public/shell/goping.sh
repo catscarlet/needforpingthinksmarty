@@ -13,6 +13,6 @@ OUTPUTFORJS=$TMP_DIR/$line.json
   echo $THESERVER >> $OUTPUTTXT
   DATETIME="Pingtime is "`date "+%Y-%m-%d %H:%M:%S"`" CST"
   echo $DATETIME >> $OUTPUTTXT
-  ping -c 4 $line |tail -n 3 >> $OUTPUTTXT
+  ping -c $PINGCOUNT $line |tail -n 3 >> $OUTPUTTXT
 
   $needforping_DIR/shell/readline.sh $OUTPUTTXT $OUTPUTTMP
