@@ -1,5 +1,6 @@
 #!/bin/bash
-. needforping.conf
+needforping_DIR=/var/www/html/8091/needforpingthinksmarty/Public/
+. /$needforping_DIR/shell/needforping.conf
 
 i=0
 OUTPUT=$2
