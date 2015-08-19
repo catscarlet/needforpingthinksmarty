@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `pinglist` (
   `alias_name` varchar(50) NOT NULL,
   `description` varchar(255) DEFAULT NULL,
   `state` varchar(50) NOT NULL DEFAULT 'normal'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
