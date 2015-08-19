@@ -40,7 +40,7 @@ needforping_DIR=/var/www/html/8091/needforpingthinksmarty/Public/
 - 手动在crontab中添加定时运行：
 
   ```
-  */2 *   * * *   root  /var/www/html/8091/needforpingthinksmarty/Public/shell/needforping.sh
+  */2 *   * * *   root  /var/www/html/8091/needforpingthinksmarty/Public/shell/needforping.sh &
   ```
 
 ### 升级
@@ -74,7 +74,9 @@ Application\Home\View\Index下的html文件负责界面展示
 - index.html负责首页展示
 
 ## 项目展示
-[临时Demo](http://pi.catscarlet.com:8091/needforpingthinksmarty/) 这是一台用旧笔记本改造的linux服务器，网络的稳定性会影响展示效果。以后会提供稳定的服务器做参考
+[Demo V1.0.0](http://server1.catscarlet.com/needforpingthinksmarty-1.0.0/)<br/> V1.0.0版本展示
+
+[Demo dev](http://pi.catscarlet.com:8091/needforpingthinksmarty/)<br/> 开发版本展示，这是一台用旧笔记本改造的linux服务器，展示的是正在开发的版本
 
 ## 已知缺陷
 - 时间范围：目前以显示记录时间范围作为显示范围，也就是说如果我在最近24小时之内关机或停用此功能1小时，那么我继续查询24小时范围内数据的话，会从之前第25小时开始显示，没有数据的1小时无法体现，横坐标轴伪连续。
@@ -89,3 +91,8 @@ Application\Home\View\Index下的html文件负责界面展示
 - 模块化
 - 优化页面显示
 - 其他细节
+
+## 其他
+GitHub:[https://github.com/catscarlet/needforpingthinksmarty](https://github.com/catscarlet/needforpingthinksmarty)
+
+Blog:[http://blog.catscarlet.com](http://blog.catscarlet.com)
