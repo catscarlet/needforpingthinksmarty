@@ -6,14 +6,14 @@ use Think\Controller;
 
 class QuerydbController extends Controller
 {
-    public function Querydb($q = 'thinkphp')
+    public function Querydb($q = '')
     {
         $query_range = 360;   //最大查询范围
         foreach ($q as $id => $query) {
             $query_output[$id] = query_db($query, $query_range);
         }
         $this->assign('query_output', json_encode($query_output));
-        $this->display();
+        $this->display('/Querydb');
     }
 }
 
