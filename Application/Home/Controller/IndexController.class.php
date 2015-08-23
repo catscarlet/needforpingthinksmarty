@@ -11,6 +11,10 @@ class IndexController extends Controller
         $pinglist = M('pinglist');
         $data = $pinglist->where('state = "normal"')->order('id')->select();
         $this->assign('list', $data);
-        $this->display();
+        $this->display('/index');
+    }
+    public function admin()
+    {
+        $this->display(admin.php);
     }
 }
